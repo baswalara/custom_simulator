@@ -1,4 +1,6 @@
-f = open("/home/kermit/Desktop/Coding/CO Project evaluation framework Apr2 (copy 1)/SimpleSimulator/input.txt", "r")
+import sys
+f =sys.argv[1]
+f=open(f,"r")
 lines = f.readlines()
 if not lines:
     print("Error: Input file is empty")
@@ -154,7 +156,8 @@ if not programCounter:
     print("Error: programCounter dictionary is empty")
     exit()
 OUTPUTS=[]
-r=open("/home/kermit/Desktop/Coding/CO Project evaluation framework Apr2 (copy 1)/SimpleSimulator/output.txt",'w')
+r=sys.argv[2]
+r=open(r,"r")
 def bin32(num):
     binary = bin(num)[2:]
     binary = binary.zfill(32)
